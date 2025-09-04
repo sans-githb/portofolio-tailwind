@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portofolio — Tailwind Version</title>
+  <link rel="stylesheet" href="dist/output.css">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/logo-icon/nm.png" type="image/x-icon" />
+  <link rel="icon" href="assets/logo-icon/favicon-32x32.png" type="image/x-icon">
+
+
+  <!-- Google Font: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- hamburger -->
+   <link rel="stylesheet" href="dist/hamburgers.css">
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    .bg-grid-80 {
+      background-color:#1a1a1a;
+      opacity:1;
+      background-image: linear-gradient(#1b1b1b 4px, transparent 4px), linear-gradient(to right, #1b1b1b 4px, #1a1a1a 4px);
+      background-size: 80px 80px;
+    }
+  </style>
+</head>
+<body id="home" class="scroll-smooth">
+  <!-- Loader -->
+  <div id="loader" class="fixed inset-0 z-[9999] grid place-items-center bg-[#f1f2f3]">
+    <img src="assets/loader/loader.svg" alt="loading.io" class="w-12 h-12" />
+  </div>
+
+  <!-- Navbar -->
+  <nav class="absolute inset-x-0 top-0 z-[999] py-6 animate-fadeInDown" style="animation-delay:3s">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        <div class="grid place-items-center w-9 h-9 rounded-full bg-white font-bold select-none">H</div>
+
+        <!-- Desktop menu -->
+        <ul id="menu" class="hidden md:flex items-center gap-8 lg:gap-10">
+          <li><a href="#home" class="text-sm text-white/50 hover:text-white">Home</a></li>
+          <li><a href="#about" class="text-sm text-white/50 hover:text-white">About</a></li>
+          <li><a href="#skills" class="text-sm text-white/50 hover:text-white">Skills</a></li>
+          <li><a href="#projects" class="text-sm text-white/50 hover:text-white">Project</a></li>
+          <li><a href="#resume" class="text-sm text-white/50 hover:text-white">Resume</a></li>
+        </ul>
+
+        <div class="flex items-center gap-4">
+          <div class="md:flex items-center gap-4 text-white/50">
+            <a href="#" class="hover:text-white"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="hover:text-white"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" class="hover:text-white"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="hover:text-white"><i class="fa-brands fa-github"></i></a>
+          </div>
+
+          <!-- Hamburger -->
+          <button id="hamburger" class="md:hidden h-6 w-8 relative flex flex-col items-center justify-center" aria-label="Toggle menu" aria-expanded="false">
+            <span class="block w-8 h-1 bg-white rounded transition-transform duration-300" id="line1"></span>
+            <span class="block w-8 h-1 bg-white rounded my-1 transition-opacity duration-300" id="line2"></span>
+            <span class="block w-8 h-1 bg-white rounded transition-transform duration-300" id="line3"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <ul id="menuMobile" class="md:hidden origin-top scale-y-0 opacity-0 transition-all duration-200 absolute left-1/2 -translate-x-1/2 mt-6 w-11/12 sm:w-4/5 bg-white rounded shadow">
+        <li><a href="#home" class="block py-3 text-center font-semibold text-hitam border-b border-black/20 hover:bg-ungu">Home</a></li>
+        <li><a href="#about" class="block py-3 text-center font-semibold text-hitam border-b border-black/20 hover:bg-ungu">About</a></li>
+        <li><a href="#skills" class="block py-3 text-center font-semibold text-hitam border-b border-black/20 hover:bg-ungu">Skills</a></li>
+        <li><a href="#projects" class="block py-3 text-center font-semibold text-hitam border-b border-black/20 hover:bg-ungu">Project</a></li>
+        <li><a href="#resume" class="block py-3 text-center font-semibold text-hitam hover:bg-ungu rounded-b">Resume</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="bg-grid-80 pt-[150px] pb-[100px] min-h-screen relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <img src="assets/images/IMG_20250903_131854.png" alt="foto-profile" class="w-[150px] sm:w-[200px] mx-auto mb-5 animate-fadeInUp" style="animation-delay:3s" />
+      <h2 class="text-white font-semibold text-xl sm:text-2xl lg:text-3xl mb-6 animate-fadeInUp" style="animation-delay:3.7s">Hi, I'm Hasan</h2>
+      <h1 class="text-white font-medium text-3xl sm:text-4xl lg:text-5xl leading-snug mb-7 animate-fadeInUp" style="animation-delay:4.2s">Mendedikasikan <br/> Dalam Pengembangan <br/> Web Development</h1>
+      <p class="text-white/50 text-sm sm:text-base leading-7 sm:leading-8 w-full sm:w-3/5 mx-auto mb-12 animate-fadeInUp" style="animation-delay:4.7s">Web Developer adalah Orang yang bertugas membuat dan mengembangkan sebuah Website atau We Development serta memastikan performa dari suatu Webite berjalan dengan baik dan optimal.</p>
+      <a href="#about" class="inline-block px-6 py-3 sm:px-6 sm:py-4 rounded bg-white text-hitam font-medium hover:bg-ungu hover:text-white transition animate-fadeInUp" style="animation-delay:5.2s">Detail About Me</a>
+    </div>
+  </header>
+
+
+  <!-- Floating info badges (hidden di < md) -->
+    <div class="hidden md:flex items-center gap-3 absolute top-[300px] left-[250px] animate-fadeInUp" style="animation-delay:5.2s">
+      <div class="bg-[#3f4451] text-white text-[14px] rounded-full px-4 py-2">Adobe Illustrator</div>
+      <i class="fa-solid fa-location-arrow text-white/50 text-2xl rotate-[15deg]"></i>
+    </div>
+    <div class="hidden md:flex items-center gap-3 absolute top-[300px] right-[250px] animate-fadeInUp" style="animation-delay:5.2s">
+      <i class="fa-solid fa-location-arrow text-white/50 text-2xl -rotate-[95deg]"></i>
+      <div class="bg-[#3f4451] text-white text-[14px] rounded-full px-4 py-2">Front End Developer</div>
+    </div>
+    <div class="hidden md:flex items-center gap-3 absolute top-[600px] right-[100px] animate-fadeInUp" style="animation-delay:5.2s">
+      <i class="fa-solid fa-location-arrow text-white/50 text-2xl -rotate-[95deg]"></i>
+      <div class="bg-[#3f4451] text-white text-[14px] rounded-full px-4 py-2">Back End Developer</div>
+    </div>
+    <div class="hidden md:flex items-center gap-3 absolute top-[600px] left-[100px] animate-fadeInUp" style="animation-delay:5.2s">
+      <div class="bg-[#3f4451] text-white text-[14px] rounded-full px-4 py-2">UI/UX Designer</div>
+      <i class="fa-solid fa-location-arrow text-white/50 text-2xl rotate-[15deg]"></i>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-[150px]">
+    <div class="w-4/5 mx-auto">
+      <div class="text-center mb-24">
+        <h1 class="text-[40px] text-2xl font-semibold mb-5" data-aos="fade-up" data-aos-duration="500">About Me</h1>
+        <p class="text-black/50" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">Sebuah Halaman Perkenalan Singkat</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 items-center">
+        <div class="mb-12 lg:mb-0" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
+          <img src="assets/images/IMG_20250903_132511.png" alt="about" class="w-full" />
+        </div>
+        <div class="lg:pl-20" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+          <h1 class="mb-1 text-3xl lg:text-4xl">Toto Ahmad Hasan</h1>
+          <p class="text-black/50 text-sm mb-5">Full Stack Web Developer, UI/UX Designer, Adobe Illustrator</p>
+          <p class="text-[14px] leading-8 mb-8">Perkenalkan, Nama <span class="font-semibold">Saya Toto Ahmad Hasan</span>, Saya adalah Seseorang yang mempunyai passion di bidang Web Developer dan Designer, salah satu moto hidup saya <span class="font-semibold">"Don't rush the process, truth it great things take time"</span> yang berarti jangan terburu - buru dalam prosesnya, percyalah bahwa hal - hal besar membutuhkan waktu.</p>
+          <a href="#resume" class="inline-block px-6 py-4 rounded bg-ungu text-white hover:bg-[#6c6bc2] transition">Visit My Resume</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="py-[100px] pb-[150px] bg-hitam">
+    <div class="w-4/5 mx-auto">
+      <div class="text-center mb-24">
+        <h1 class="text-[40px] font-semibold mb-2 text-white" data-aos="fade-up" data-aos-duration="500">Skills</h1>
+        <p class="text-white/50" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">Sebuah Halaman yang menerangkan sklils yang dimiliki</p>
+      </div>
+
+      <div class="flex flex-col items-center gap-7">
+        <!-- Front End -->
+        <div class="bg-white rounded-[10px] px-10 py-8 transition hover:-translate-y-2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
+          <h3 class="text-center text-hitam mb-5 font-semibold">Front End Developer</h3>
+          <div class="flex flex-wrap justify-center gap-2">
+            <div class="px-5 py-2 rounded-full bg-[#ff70a6]">HTML</div>
+            <div class="px-5 py-2 rounded-full bg-[#ff70a6]">CSS</div>
+            <div class="px-5 py-2 rounded-full bg-[#ff70a6]">Javascript</div>
+            <div class="px-5 py-2 rounded-full bg-[#ff70a6]">Bootstrap</div>
+            <div class="px-5 py-2 rounded-full bg-[#ff70a6]">Tailwind</div>
+            <div class="px-5 py-2 rounded-full bg-[#ff70a6]">React Js</div>
+            <div class="px-5 py-2 rounded-full bg-[#ff70a6]">Vue Js</div>
+          </div>
+        </div>
+        <!-- Back End -->
+        <div class="bg-white rounded-[10px] px-10 py-8 transition hover:-translate-y-2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+          <h3 class="text-center text-hitam mb-5 font-semibold">Back End Developer</h3>
+          <div class="flex flex-wrap justify-center gap-2">
+            <div class="px-5 py-2 rounded-full bg-[#ff9370]">Javascript</div>
+            <div class="px-5 py-2 rounded-full bg-[#ff9370]">Node Js</div>
+            <div class="px-5 py-2 rounded-full bg-[#ff9370]">Express Js</div>
+            <div class="px-5 py-2 rounded-full bg-[#ff9370]">Bootstrap</div>
+            <div class="px-5 py-2 rounded-full bg-[#ff9370]">My SQL</div>
+          </div>
+        </div>
+        <!-- UI/UX -->
+        <div class="bg-white rounded-[10px] px-10 py-8 transition hover:-translate-y-2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="600">
+          <h3 class="text-center text-hitam mb-5 font-semibold">UI/UX Designer</h3>
+          <div class="flex flex-wrap justify-center gap-2">
+            <div class="px-5 py-2 rounded-full bg-[#70d6ff]">Figma</div>
+            <div class="px-5 py-2 rounded-full bg-[#70d6ff]">Adobe XD</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="py-[150px]">
+    <div class="w-4/5 mx-auto">
+      <div class="text-center mb-[150px]">
+        <h1 class="text-[40px] font-semibold mb-2" data-aos="fade-up" data-aos-duration="500">Projects</h1>
+        <p class="text-black/90" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">Sebuah Halaman Projects yang sudah dibuat</p>
+      </div>
+
+      <!-- Big Projects -->
+      <div class="mb-[150px]">
+        <h1 class="text-center mb-5 text-[20px] font-semibold" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">My Big Projects</h1>
+        <div class="flex flex-wrap justify-center gap-x-5 gap-y-12">
+          <!-- card 1 -->
+          <div class="w-[320px]" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+            <img src="assets/images/projects/bigprojects/big-project1.jpg" alt="unsplash.com" class="w-full h-[250px] object-cover mb-5 rounded" />
+            <h3 class="mb-1 text-lg font-semibold">Website Tracer Study</h3>
+            <p class="mb-2 text-[14px]">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, ratione.</p>
+            <div class="flex flex-wrap gap-2 mb-7">
+              <button class="w-[100px] h-[30px] rounded-full border border-black">React Js</button>
+              <button class="w-[100px] h-[30px] rounded-full border border-black">Bootstrap</button>
+              <button class="w-[100px] h-[30px] rounded-full border border-black">Noed Js</button>
+              <button class="w-[100px] h-[30px] rounded-full border border-black">Express Js</button>
+              <button class="w-[100px] h-[30px] rounded-full border border-black">Mongo DB</button>
+            </div>
+            <div class="flex justify-center gap-1">
+              <a class="px-5 py-1 bg-[#833bec] text-white rounded" href="#">Github</a>
+              <a class="px-5 py-1 bg-green-600 text-white rounded" href="#">Demo</a>
+            </div>
+          </div>
+          <!-- card 2 -->
+          <div class="w-[320px]" data-aos="fade-up" data-aos-duration="500" data-aos-delay="600">
+            <img src="assets/images/projects/bigprojects/big-project2.jpg" alt="unsplash.com" class="w-full h-[250px] object-cover mb-5 rounded" />
+            <h3 class="mb-1 text-lg font-semibold">Website Penerimaan Siswa</h3>
+            <p class="mb-2 text-[14px]">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, ratione.</p>
+            <div class="flex flex-wrap gap-2 mb-7">
+              <button class="w-[100px] h-[30px] rounded-full border border-black">React Js</button>
+              <button class="w-[100px] h-[30px] rounded-full border border-black">Bootstrap</button>
+              <button class="w-[100px] h-[30px] rounded-full border border-black">Noed Js</button>
+              <button class="w-[100px] h-[30px] rounded-full border border-black">Express Js</button>
+              <button class="w-[100px] h-[30px] rounded-full border border-black">My SQL</button>
+            </div>
+            <div class="flex justify-center gap-1">
+              <a class="px-5 py-1 bg-[#833bec] text-white rounded" href="#">Github</a>
+              <a class="px-5 py-1 bg-green-600 text-white rounded" href="#">Demo</a>
+            </div>
+          </div>
+          <!-- card 3 -->
+          <div class="w-[320px]" data-aos="fade-up" data-aos-duration="500" data-aos-delay="700">
+            <img src="assets/images/projects/bigprojects/big-project3.jpg" alt="unsplash.com" class="w-full h-[250px] object-cover mb-5 rounded" />
+            <h3 class="mb-1 text-lg font-semibold">Website Inventory</h3>
+            <p class="mb-2 text-[14px]">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, ratione.</p>
+            <div class="flex flex-wrap gap-2 mb-7">
+              <button class="w-[100px] h-[30px] rounded-full border border-black">React Js</button>
+              <button class="w-[100px] h-[30px] rounded-full border border-black">Tailwind</button>
+              <button class="w-[100px] h-[30px] rounded-full border border-black">Noed Js</button>
+              <button class="w-[100px] h-[30px] rounded-full border border-black">Express Js</button>
+              <button class="w-[100px] h-[30px] rounded-full border border-black">Mongo DB</button>
+            </div>
+            <div class="flex justify-center gap-1">
+              <a class="px-5 py-1 bg-[#833bec] text-white rounded" href="#">Github</a>
+              <a class="px-5 py-1 bg-green-600 text-white rounded" href="#">Demo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Front Web Projects -->
+      <div class="mb-[150px]">
+        <h1 class="text-center mb-5 text-[20px] font-semibold" data-aos="fade-up" data-aos-duration="500">Front Web Projects</h1>
+        <div class="flex flex-wrap justify-center gap-x-5 gap-y-12">
+          <!-- card 1 -->
+          <div class="w-[320px]" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+            <img src="assets/images/projects/frontprojects/frontprojects1.jpg" alt="unsplash.com" class="w-full h-[250px] object-cover mb-5 rounded" />
+            <h3 class="mb-1 text-lg font-semibold">Website Portofolio</h3>
+            <p class="mb-2 text-[14px]">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, ratione.</p>
+            <div class="flex flex-wrap gap-2 mb-7">
+              <button class="w-[100px] h-[30px] rounded-full border border-black">HTML</button>
+              <button class="w-[100px] h-[30px] rounded-full border border-black">CSS</button>
+              <button class="w-[100px] h-[30px] rounded-full border border-black">Javascript</button>
+            </div>
+            <div class="flex justify-center gap-1">
+              <a class="px-5 py-1 bg-[#833bec] text-white rounded" href="#">Github</a>
+              <a class="px-5 py-1 bg-green-600 text-white rounded" href="#">Demo</a>
+            </div>
+          </div>
+          <!-- card 2 -->
+          <div class="w-[320px]" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+            <img src="assets/images/projects/frontprojects/frontprojects2.jpg" alt="unsplash.com" class="w-full h-[250px] object-cover mb-5 rounded" />
+            <h3 class="mb-1 text-lg font-semibold">Website sekolah</h3>
+            <p class="mb-2 text-[14px]">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, ratione.</p>
+            <div class="flex flex-wrap gap-2 mb-7">
+              <button class="w-[100px] h-[30px] rounded-full border border-black">Vue Js</button>
+              <button class="w-[100px] h-[30px] rounded-full border border-black">Bootstrap</button>
+            </div>
+            <div class="flex justify-center gap-1">
+              <a class="px-5 py-1 bg-[#833bec] text-white rounded" href="#">Github</a>
+              <a class="px-5 py-1 bg-green-600 text-white rounded" href="#">Demo</a>
+            </div>
+          </div>
+          <!-- card 3 -->
+          <div class="w-[320px]" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
+            <img src="assets/images/projects/frontprojects/frontprojects3.jpg" alt="unsplash.com" class="w-full h-[250px] object-cover mb-5 rounded" />
+            <h3 class="mb-1 text-lg font-semibold">Clone Facebook</h3>
+            <p class="mb-2 text-[14px]">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, ratione.</p>
+            <div class="flex flex-wrap gap-2 mb-7">
+              <button class="w-[100px] h-[30px] rounded-full border border-black">React Js</button>
+              <button class="w-[100px] h-[30px] rounded-full border border-black">Tailwind</button>
+            </div>
+            <div class="flex justify-center gap-1">
+              <a class="px-5 py-1 bg-[#833bec] text-white rounded" href="#">Github</a>
+              <a class="px-5 py-1 bg-green-600 text-white rounded" href="#">Demo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- UI/UX Design Projects -->
+      <div class="mb-24">
+        <h1 class="text-center mb-5 text-[20px] font-semibold" data-aos="fade-up" data-aos-duration="500">UI/UX Design Projects</h1>
+        <div class="flex flex-wrap justify-center gap-x-5 gap-y-8">
+          <!-- card 1 -->
+          <div class="w-[320px]" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+            <img src="assets/images/projects/uiuxdesign/design1.jpg" alt="unsplash.com" class="w-full h-[250px] object-cover mb-5 rounded" />
+            <h3 class="mb-1 text-lg font-semibold">Website Agency</h3>
+            <p class="mb-2 text-[14px]">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, ratione.</p>
+            <div class="flex flex-wrap gap-2 mb-7">
+              <button class="w-[100px] h-[30px] rounded-full border border-black">Figma</button>
+            </div>
+          </div>
+          <!-- card 2 -->
+          <div class="w-[320px]" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+            <img src="assets/images/projects/uiuxdesign/design2.jpg" alt="unsplash.com" class="w-full h-[250px] object-cover mb-5 rounded" />
+            <h3 class="mb-1 text-lg font-semibold">Website Course</h3>
+            <p class="mb-2 text-[14px]">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, ratione.</p>
+            <div class="flex flex-wrap gap-2 mb-7">
+              <button class="w-[100px] h-[30px] rounded-full border border-black">Adobe XD</button>
+            </div>
+          </div>
+          <!-- card 3 -->
+          <div class="w-[320px]" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
+            <img src="assets/images/projects/uiuxdesign/design3.jpg" alt="unsplash.com" class="w-full h-[250px] object-cover mb-5 rounded" />
+            <h3 class="mb-1 text-lg font-semibold">Portofolio</h3>
+            <p class="mb-2 text-[14px]">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, ratione.</p>
+            <div class="flex flex-wrap gap-2 mb-7">
+              <button class="w-[100px] h-[30px] rounded-full border border-black">Figma</button>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-12" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+          <a href="#" class="inline-block px-5 py-2 bg-[#ff006e] text-white rounded">Visit My Dribbble <i class="fa-brands fa-dribbble ml-1"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESUME -->
+  <section id="resume" class="py-[150px] bg-hitam">
+    <div class="w-4/5 mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-24">
+      <div data-aos="fade-up" data-aos-duration="500">
+        <img src="assets/images/resume.svg" alt="undraw.io" class="w-full max-w-[700px] mx-auto" />
+      </div>
+      <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+        <h1 class="text-white text-[40px] mb-2 font-semibold">Resume</h1>
+        <p class="text-white/50 mb-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus laborum, dolorum ut impedit sapiente recusandae omnis repellat officia consequatur culpa.</p>
+        <a href="#" class="inline-block px-7 py-4 bg-ungu text-white hover:opacity-80">My Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-hitam py-[100px] -mt-2">
+    <div class="w-4/5 mx-auto flex flex-col lg:flex-row justify-between gap-12">
+      <div class="text-white lg:w-[500px]">
+        <h2 class="mb-5 text-2xl font-semibold">Portofolio</h2>
+        <p class="text-white/50 text-[14px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores et vel aspernatur? Impedit nesciunt molestiae at sunt error molestias nihil voluptatum aspernatur. Quaerat, ut! Repellat voluptatem ipsa in iusto deleniti?</p>
+      </div>
+      <div class="flex flex-col w-[100px]">
+        <h3 class="text-white mb-5 text-lg font-semibold">Menu</h3>
+        <a href="#home" class="text-white/50 hover:text-white mb-1">Home</a>
+        <a href="#about" class="text-white/50 hover:text-white mb-1">About</a>
+        <a href="#skills" class="text-white/50 hover:text-white mb-1">Skills</a>
+        <a href="#projects" class="text-white/50 hover:text-white mb-1">Projcets</a>
+        <a href="#resume" class="text-white/50 hover:text-white mb-1">Resume</a>
+      </div>
+      <div class="flex flex-col w-[150px]">
+        <h3 class="text-white mb-5 text-lg font-semibold">My Social</h3>
+        <a href="#" class="text-white/50 hover:text-white mb-1">Instagram</a>
+        <a href="#" class="text-white/50 hover:text-white mb-1">LinkendIn</a>
+        <a href="#" class="text-white/50 hover:text-white mb-1">Twitter</a>
+        <a href="#" class="text-white/50 hover:text-white mb-1">Facebook</a>
+        <a href="#" class="text-white/50 hover:text-white mb-1">Github</a>
+      </div>
+    </div>
+  </footer>
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="dist/script.js">
+    
+  </script>
+</body>
+</html>
